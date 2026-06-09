@@ -17,7 +17,7 @@ export default function App() {
             <img src="/sublify_logo.png" alt="Sublify Logo" className="w-10 h-10 object-contain" />
             <div className="flex flex-col items-center">
               <span className="font-black text-[22px] leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>SUBLIFY</span>
-              <span className="text-[10px] text-muted-foreground uppercase font-semibold -mt-0.5">Sublimation Automation</span>
+              <span className="text-[10px] text-muted-foreground uppercase font-semibold -mt-0.5">Automate. Layout. Perfect.</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-8 font-medium text-sm pr-4">
@@ -273,7 +273,7 @@ export default function App() {
               <img src="/sublify_logo.png" alt="Sublify Logo" className="w-10 h-10 object-contain" />
               <div className="flex flex-col items-center">
                 <span className="font-black text-[22px] leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>SUBLIFY</span>
-                <span className="text-[10px] text-muted-foreground uppercase font-semibold -mt-0.5">Sublimation Automation</span>
+                <span className="text-[10px] text-muted-foreground uppercase font-semibold -mt-0.5">Automate. Layout. Perfect.</span>
               </div>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm text-center md:text-left">
