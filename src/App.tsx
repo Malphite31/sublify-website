@@ -2,8 +2,8 @@ import { SparklesText } from "@/components/ui/sparkles-text";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 import { Spotlight } from "@/components/ui/spotlight";
 import { LampContainer } from "@/components/ui/lamp";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MagicCard } from "@/components/ui/magic-card";
-import { LiquidButton } from "@/components/animate-ui/components/buttons/liquid";
 import { Layers, Zap, PenTool, CheckCircle2, Download, ArrowRight } from 'lucide-react';
 import { motion } from "framer-motion";
 
@@ -61,11 +61,11 @@ export default function App() {
           </p>
 
           <div className="z-20 mt-4">
-            <a href="https://drive.google.com/file/d/1cBn_YshTpSP1PfTBDaYYylRfVzY592nT/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <LiquidButton className="px-8 py-6 text-lg font-bold shadow-2xl flex items-center gap-3 bg-primary text-primary-foreground border-primary rounded-2xl">
-                <Download className="w-5 h-5" />
-                <span>Download for Windows</span>
-              </LiquidButton>
+            <a href="https://drive.google.com/file/d/1cBn_YshTpSP1PfTBDaYYylRfVzY592nT/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="group">
+              <RainbowButton className="px-8 py-7 text-lg font-bold shadow-2xl flex items-center gap-3">
+                <Download className="w-5 h-5 text-white" />
+                <span className="text-white">Download for Windows</span>
+              </RainbowButton>
             </a>
           </div>
           <p className="text-sm text-muted-foreground mt-4 z-20">Requires Windows 10 or later</p>
@@ -228,10 +228,10 @@ export default function App() {
             className="mt-12 flex justify-center w-full"
           >
             <a href="https://drive.google.com/file/d/1cBn_YshTpSP1PfTBDaYYylRfVzY592nT/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="group cursor-pointer">
-              <LiquidButton className="px-10 py-8 text-xl font-bold shadow-[0_0_40px_rgba(255,255,255,0.1)] flex items-center gap-3 bg-primary text-primary-foreground border-primary rounded-2xl">
-                <Download className="w-6 h-6" />
-                <span>Download Sublify Now</span>
-              </LiquidButton>
+              <RainbowButton className="px-10 py-8 text-xl font-bold shadow-[0_0_40px_rgba(255,255,255,0.1)] flex items-center gap-3">
+                <Download className="w-6 h-6 text-white" />
+                <span className="text-white">Download Sublify Now</span>
+              </RainbowButton>
             </a>
           </motion.div>
         </LampContainer>
