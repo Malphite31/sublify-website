@@ -139,50 +139,49 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Free Tier */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* 90 Days Tier */}
             <div className="rounded-3xl p-8 bg-surface border border-border backdrop-blur-xl flex flex-col">
-              <h3 className="text-2xl font-bold text-foreground mb-2">Starter</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-2">90 Days</h3>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-black text-foreground">$0</span>
-                <span className="text-muted-foreground">/ forever</span>
+                <span className="text-5xl font-black text-foreground">₱1k</span>
+                <span className="text-muted-foreground">/ 90 days</span>
               </div>
-              <p className="text-muted-foreground mb-8 pb-8 border-b border-border">Perfect for trying out Sublify's basic automation tools.</p>
+              <p className="text-muted-foreground mb-8 pb-8 border-b border-border">Perfect for seasonal shops or short-term projects.</p>
               
               <ul className="flex flex-col gap-4 mb-8 flex-grow">
-                {['Basic batch naming', 'Manual layout tools', 'Community support'].map(feature => (
+                {['Full Batch Processing', 'Auto-Resizing Engine', 'Lineup Formatter', 'Community Support'].map(feature => (
                   <li key={feature} className="flex items-center gap-3 text-muted-foreground">
                     <CheckCircle2 className="h-5 w-5 text-muted-foreground opacity-50" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block mt-auto">
                 <button className="w-full py-4 rounded-xl font-bold text-foreground bg-surface hover:bg-surface/80 border border-border flex items-center justify-center gap-2 transition-colors">
                   Contact to Buy
                 </button>
               </a>
             </div>
 
-            {/* Pro Tier */}
-            <div className="rounded-3xl p-8 bg-surface border border-primary/30 backdrop-blur-xl flex flex-col relative shadow-[0_0_40px_rgba(255,255,255,0.05)]">
+            {/* 1 Year Tier */}
+            <div className="rounded-3xl p-8 bg-surface border border-primary/30 backdrop-blur-xl flex flex-col relative shadow-[0_0_40px_rgba(255,255,255,0.05)] md:-translate-y-4">
               <div className="absolute top-0 right-8 transform -translate-y-1/2">
                 <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-2">Pro Print Shop</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">1 Year</h3>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-black text-foreground">$49</span>
-                <span className="text-muted-foreground">/ month</span>
+                <span className="text-5xl font-black text-foreground">₱3k</span>
+                <span className="text-muted-foreground">/ 1 year</span>
               </div>
-              <p className="text-muted-foreground mb-8 pb-8 border-b border-border">Everything you need to run a high-volume sublimation shop.</p>
+              <p className="text-muted-foreground mb-8 pb-8 border-b border-border">Everything you need for a growing sublimation business.</p>
               
               <ul className="flex flex-col gap-4 mb-8 flex-grow">
                 {[
-                  'Advanced Batch Processing',
-                  'Smart Auto-Resizing Engine',
-                  'One-click Lineup Formatter',
+                  'All 90-Day Features',
                   'Assorted Template Support',
-                  'Priority 24/7 Support'
+                  'Priority Support',
+                  'Save ₱1,000 annually'
                 ].map(feature => (
                   <li key={feature} className="flex items-center gap-3 text-foreground">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
@@ -190,10 +189,39 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block mt-auto">
                 <button className="w-full py-4 rounded-xl font-bold text-primary-foreground bg-primary hover:opacity-90 shadow-lg shadow-black/25 flex items-center justify-center gap-2 transition-colors">
                   Contact to Buy
                   <ArrowRight className="w-5 h-5" />
+                </button>
+              </a>
+            </div>
+
+            {/* Lifetime Tier */}
+            <div className="rounded-3xl p-8 bg-surface border border-border backdrop-blur-xl flex flex-col">
+              <h3 className="text-2xl font-bold text-foreground mb-2">Lifetime</h3>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-5xl font-black text-foreground">₱5k</span>
+                <span className="text-muted-foreground">/ forever</span>
+              </div>
+              <p className="text-muted-foreground mb-8 pb-8 border-b border-border">One-time payment for ultimate, unrestricted automation.</p>
+              
+              <ul className="flex flex-col gap-4 mb-8 flex-grow">
+                {[
+                  'All 1-Year Features',
+                  'Free Lifetime Updates',
+                  '24/7 VIP Support',
+                  'No recurring fees'
+                ].map(feature => (
+                  <li key={feature} className="flex items-center gap-3 text-muted-foreground">
+                    <CheckCircle2 className="h-5 w-5 text-muted-foreground opacity-50" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block mt-auto">
+                <button className="w-full py-4 rounded-xl font-bold text-foreground bg-surface hover:bg-surface/80 border border-border flex items-center justify-center gap-2 transition-colors">
+                  Contact to Buy
                 </button>
               </a>
             </div>
