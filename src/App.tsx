@@ -157,7 +157,7 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block">
                 <button className="w-full py-4 rounded-xl font-bold text-foreground bg-surface hover:bg-surface/80 border border-border flex items-center justify-center gap-2 transition-colors">
                   Contact to Buy
                 </button>
@@ -190,7 +190,7 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="block">
                 <button className="w-full py-4 rounded-xl font-bold text-primary-foreground bg-primary hover:opacity-90 shadow-lg shadow-black/25 flex items-center justify-center gap-2 transition-colors">
                   Contact to Buy
                   <ArrowRight className="w-5 h-5" />
