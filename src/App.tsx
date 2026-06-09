@@ -16,8 +16,10 @@ export default function App() {
           <div className="flex items-center gap-3">
             <img src="/sublify_logo.png" alt="Sublify Logo" className="w-10 h-10 object-contain" />
             <div className="flex flex-col">
-              <span className="font-black tracking-widest text-lg leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>SUBLIFY</span>
-              <span className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Sublimation Automation</span>
+              <div className="flex justify-between w-full font-black text-lg leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>
+                <span>S</span><span>U</span><span>B</span><span>L</span><span>I</span><span>F</span><span>Y</span>
+              </div>
+              <span className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1 whitespace-nowrap">Sublimation Automation</span>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-8 font-medium text-sm pr-4">
@@ -272,8 +274,10 @@ export default function App() {
             <div className="flex items-center gap-3">
               <img src="/sublify_logo.png" alt="Sublify Logo" className="w-10 h-10 object-contain" />
               <div className="flex flex-col">
-                <span className="font-black tracking-widest text-lg leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>SUBLIFY</span>
-                <span className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">Sublimation Automation</span>
+                <div className="flex justify-between w-full font-black text-lg leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>
+                  <span>S</span><span>U</span><span>B</span><span>L</span><span>I</span><span>F</span><span>Y</span>
+                </div>
+                <span className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1 whitespace-nowrap">Sublimation Automation</span>
               </div>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm text-center md:text-left">
