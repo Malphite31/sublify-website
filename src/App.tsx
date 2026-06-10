@@ -15,9 +15,16 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src="/sublify_logo.png" alt="Sublify Logo" className="w-10 h-10 object-contain" />
-            <div className="flex flex-col items-center">
-              <span className="font-black text-[22px] leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>SUBLIFY</span>
-              <span className="text-[8px] text-muted-foreground uppercase font-semibold -mt-0.5">Automate. Layout. Perfect.</span>
+            <div className="flex flex-col w-fit items-stretch">
+              <span className="font-black text-2xl md:text-3xl leading-none italic tracking-tight text-center" style={{ fontFamily: "'Monument Extended Black Italic', sans-serif" }}>SUBLIFY</span>
+              <div 
+                className="flex justify-between w-full text-[6px] md:text-[8px] text-muted-foreground uppercase font-semibold whitespace-nowrap -mt-0.5 md:-mt-1" 
+                style={{ fontFamily: "'Monument Extended Italic', sans-serif" }}
+              >
+                <span>AUTOMATE.</span>
+                <span>LAYOUT.</span>
+                <span>PERFECT.</span>
+              </div>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-8 font-medium text-sm pr-4">
@@ -46,15 +53,24 @@ export default function App() {
 
           <img src="/sublify_logo.png" alt="Sublify Logo" className="w-40 h-40 md:w-48 md:h-48 mb-6 object-contain" />
 
-          <SparklesText 
-            className="text-4xl md:text-6xl font-black text-foreground tracking-[0.1em] drop-shadow-sm mb-1"
-            colors={{ first: '#ffffff', second: '#888888' }}
-            style={{ fontFamily: "'Monument Extended', sans-serif" }}
-          >
-            SUBLIFY
-          </SparklesText>
+          <div className="flex flex-col w-fit items-stretch mx-auto mb-12">
+            <SparklesText 
+              className="text-3xl md:text-5xl font-black text-foreground tracking-tight drop-shadow-sm mb-1 text-center"
+              colors={{ first: '#ffffff', second: '#888888' }}
+              style={{ fontFamily: "'Monument Extended Black Italic', sans-serif" }}
+            >
+              SUBLIFY
+            </SparklesText>
 
-          <span className="text-sm md:text-base font-bold tracking-[0.3em] text-muted-foreground mb-12 drop-shadow-sm">AUTOMATE. LAYOUT. PERFECT.</span>
+            <div 
+              className="flex justify-between w-full text-[10px] md:text-xs font-bold text-muted-foreground drop-shadow-sm tracking-widest" 
+              style={{ fontFamily: "'Monument Extended Italic', sans-serif" }}
+            >
+              <span>AUTOMATE.</span>
+              <span>LAYOUT.</span>
+              <span>PERFECT.</span>
+            </div>
+          </div>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl leading-relaxed font-medium">
             The ultimate Photoshop automation toolkit for modern print shops. Batch process jerseys, shorts, and sleeves with zero manual effort.
@@ -271,9 +287,16 @@ export default function App() {
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-3">
               <img src="/sublify_logo.png" alt="Sublify Logo" className="w-10 h-10 object-contain" />
-              <div className="flex flex-col items-center">
-                <span className="font-black text-[22px] leading-none" style={{ fontFamily: "'Monument Extended', sans-serif" }}>SUBLIFY</span>
-                <span className="text-[8px] text-muted-foreground uppercase font-semibold -mt-0.5">Automate. Layout. Perfect.</span>
+              <div className="flex flex-col w-fit items-stretch">
+                <span className="font-black text-2xl md:text-3xl leading-none italic tracking-tight text-center" style={{ fontFamily: "'Monument Extended Black Italic', sans-serif" }}>SUBLIFY</span>
+                <div 
+                  className="flex justify-between w-full text-[6px] md:text-[8px] text-muted-foreground uppercase font-semibold whitespace-nowrap -mt-0.5 md:-mt-1" 
+                  style={{ fontFamily: "'Monument Extended Italic', sans-serif" }}
+                >
+                  <span>AUTOMATE.</span>
+                  <span>LAYOUT.</span>
+                  <span>PERFECT.</span>
+                </div>
               </div>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm text-center md:text-left">
