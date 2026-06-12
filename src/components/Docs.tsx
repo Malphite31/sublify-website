@@ -75,7 +75,7 @@ export default function Docs({ onBack }: DocsProps) {
         </div>
       </header>
 
-      <div className="flex flex-col lg:flex-row pt-16 sm:pt-20">
+      <div className="flex flex-col lg:flex-row pt-16 sm:pt-20 w-full max-w-full">
         <aside className="hidden lg:block w-64 shrink-0 border-r border-border h-[calc(100vh-5rem)] sticky top-20 overflow-y-auto">
           <nav className="p-6 space-y-1">
             {sections.map(({ id, label, icon: Icon }) => (
@@ -87,7 +87,7 @@ export default function Docs({ onBack }: DocsProps) {
           </nav>
         </aside>
 
-        <div className="lg:hidden w-full overflow-x-auto border-b border-border bg-surface/50 sticky top-16 sm:top-20 z-40">
+        <div className="lg:hidden w-full max-w-full overflow-x-auto border-b border-border bg-surface/50 sticky top-16 sm:top-20 z-40">
           <div className="flex gap-1 p-3 min-w-max">
             {sections.map(({ id, label, icon: Icon }) => (
               <a key={id} href={`#${id}`} className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-surface whitespace-nowrap transition-all border border-border/50">
@@ -98,7 +98,7 @@ export default function Docs({ onBack }: DocsProps) {
           </div>
         </div>
 
-        <main className="flex-1 min-w-0 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16">
+        <main className="flex-1 w-full min-w-0 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16 overflow-hidden">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="space-y-12 sm:space-y-20">
 
             {/* Getting Started */}
