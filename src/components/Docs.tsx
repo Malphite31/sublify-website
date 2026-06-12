@@ -75,7 +75,7 @@ export default function Docs({ onBack }: DocsProps) {
         </div>
       </header>
 
-      <div className="flex pt-16 sm:pt-20">
+      <div className="flex flex-col lg:flex-row pt-16 sm:pt-20">
         <aside className="hidden lg:block w-64 shrink-0 border-r border-border h-[calc(100vh-5rem)] sticky top-20 overflow-y-auto">
           <nav className="p-6 space-y-1">
             {sections.map(({ id, label, icon: Icon }) => (
@@ -87,7 +87,7 @@ export default function Docs({ onBack }: DocsProps) {
           </nav>
         </aside>
 
-        <div className="lg:hidden w-full overflow-x-auto border-b border-border bg-surface/50">
+        <div className="lg:hidden w-full overflow-x-auto border-b border-border bg-surface/50 sticky top-16 sm:top-20 z-40">
           <div className="flex gap-1 p-3 min-w-max">
             {sections.map(({ id, label, icon: Icon }) => (
               <a key={id} href={`#${id}`} className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-surface whitespace-nowrap transition-all border border-border/50">

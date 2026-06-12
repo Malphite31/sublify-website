@@ -314,7 +314,7 @@ export default function App() {
             </p>
           </div>
           
-          <div className="flex gap-8 text-sm font-medium">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-medium mt-6 md:mt-0">
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors">Download</a>
