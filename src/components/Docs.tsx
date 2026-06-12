@@ -56,26 +56,26 @@ export default function Docs({ onBack }: DocsProps) {
   return (
     <div className="w-full min-h-screen bg-background text-foreground selection:bg-accent/50 dark overflow-x-hidden font-sans">
       <header className="fixed top-0 w-full z-50 backdrop-blur-xl bg-background/80 border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-          <button onClick={onBack} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-            <ArrowLeft className="w-4 h-4" />
-            {lang === 'en' ? 'Back to Home' : 'Bumalik sa Home'}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between relative">
+          <button onClick={onBack} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm font-medium z-10 shrink-0">
+            <ArrowLeft className="w-5 h-5 sm:w-4 sm:h-4" />
+            <span className="hidden sm:inline">{lang === 'en' ? 'Back to Home' : 'Bumalik sa Home'}</span>
           </button>
           
-          <div className="flex items-center gap-3 absolute left-1/2 -translate-x-1/2">
-            <img src="/sublify_logo.png" alt="Sublify Logo" className="w-8 h-8 object-contain" />
-            <span className="font-black text-xl leading-none italic tracking-tight" style={{ fontFamily: "'Monument Extended Black Italic', sans-serif" }}>SUBLIFY</span>
-            <span className="text-xs text-muted-foreground ml-1 hidden sm:inline">Docs</span>
+          <div className="flex items-center gap-2 sm:gap-3 absolute left-1/2 -translate-x-1/2">
+            <img src="/sublify_logo.png" alt="Sublify Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+            <span className="font-black text-lg sm:text-xl leading-none italic tracking-tight hidden sm:block" style={{ fontFamily: "'Monument Extended Black Italic', sans-serif" }}>SUBLIFY</span>
+            <span className="text-[10px] sm:text-xs text-muted-foreground ml-1 hidden md:inline">Docs</span>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-1 sm:gap-2 z-10 shrink-0">
             <button onClick={() => setLang('en')} className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${lang === 'en' ? 'bg-primary text-primary-foreground' : 'bg-surface text-muted-foreground hover:bg-surface/80'}`}>EN</button>
             <button onClick={() => setLang('tl')} className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${lang === 'tl' ? 'bg-primary text-primary-foreground' : 'bg-surface text-muted-foreground hover:bg-surface/80'}`}>TL</button>
           </div>
         </div>
       </header>
 
-      <div className="flex pt-20">
+      <div className="flex pt-16 sm:pt-20">
         <aside className="hidden lg:block w-64 shrink-0 border-r border-border h-[calc(100vh-5rem)] sticky top-20 overflow-y-auto">
           <nav className="p-6 space-y-1">
             {sections.map(({ id, label, icon: Icon }) => (
@@ -98,8 +98,8 @@ export default function Docs({ onBack }: DocsProps) {
           </div>
         </div>
 
-        <main className="flex-1 min-w-0 max-w-4xl mx-auto px-6 lg:px-12 py-12 lg:py-16">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="space-y-20">
+        <main className="flex-1 min-w-0 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="space-y-12 sm:space-y-20">
 
             {/* Getting Started */}
             <section id="getting-started">
@@ -388,11 +388,11 @@ export default function Docs({ onBack }: DocsProps) {
                   },
                 ].map(({ q, a }) => (
                   <details key={q} className="glass-panel rounded-xl group">
-                    <summary className="p-5 cursor-pointer list-none flex items-center justify-between gap-4">
-                      <span className="font-medium">{q}</span>
-                      <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0 transition-transform group-open:rotate-90" />
+                    <summary className="p-4 sm:p-5 cursor-pointer list-none flex items-start justify-between gap-4">
+                      <span className="font-medium text-sm sm:text-base leading-snug pt-0.5">{q}</span>
+                      <ChevronRight className="w-5 h-5 text-muted-foreground shrink-0 transition-transform group-open:rotate-90" />
                     </summary>
-                    <div className="px-5 pb-5 pt-0 text-muted-foreground border-t border-border pt-4">
+                    <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-0 text-muted-foreground text-sm sm:text-base border-t border-border pt-4">
                       {a}
                     </div>
                   </details>
@@ -467,10 +467,10 @@ export default function Docs({ onBack }: DocsProps) {
         </main>
       </div>
 
-      <footer className="w-full bg-surface border-t border-border px-6 py-8">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+      <footer className="w-full bg-surface border-t border-border px-4 sm:px-6 py-6 sm:py-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground text-center sm:text-left">
           <p>&copy; {new Date().getFullYear()} Sublify. {lang === 'en' ? 'All rights reserved.' : 'Lahat ng karapatan ay nakareserba.'}</p>
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6">
             <button onClick={onBack} className="hover:text-foreground transition-colors">{lang === 'en' ? 'Back to Home' : 'Bumalik sa Home'}</button>
             <a href="https://facebook.com/djbenzzmc" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Support</a>
           </div>
