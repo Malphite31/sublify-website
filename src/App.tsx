@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -10,9 +10,31 @@ import { motion } from "framer-motion";
 import Docs from "@/components/Docs";
 
 export default function App() {
-  const [showDocs, setShowDocs] = useState(false);
+  const [showDocs, setShowDocs] = useState(() => {
+    return new URLSearchParams(window.location.search).get('page') === 'docs';
+  });
 
-  if (showDocs) return <Docs onBack={() => setShowDocs(false)} />;
+  useEffect(() => {
+    const handlePopState = () => {
+      setShowDocs(new URLSearchParams(window.location.search).get('page') === 'docs');
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleShowDocs = (show: boolean) => {
+    const url = new URL(window.location.href);
+    if (show) {
+      url.searchParams.set('page', 'docs');
+    } else {
+      url.searchParams.delete('page');
+      url.hash = '';
+    }
+    window.history.pushState(null, '', url.toString());
+    setShowDocs(show);
+  };
+
+  if (showDocs) return <Docs onBack={() => handleShowDocs(false)} />;
 
   return (
     <div className="w-full min-h-screen bg-background text-foreground selection:bg-accent/50 dark overflow-x-hidden font-sans">
@@ -37,7 +59,7 @@ export default function App() {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors">Download</a>
-            <button onClick={() => setShowDocs(true)} className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 bg-surface px-3 py-1.5 rounded-lg border border-border text-xs">
+            <button onClick={() => handleShowDocs(true)} className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 bg-surface px-3 py-1.5 rounded-lg border border-border text-xs">
               <Book className="w-3.5 h-3.5" />
               Docs
             </button>
@@ -318,7 +340,7 @@ export default function App() {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors">Download</a>
-            <button onClick={() => setShowDocs(true)} className="text-muted-foreground hover:text-foreground transition-colors">Docs</button>
+            <button onClick={() => handleShowDocs(true)} className="text-muted-foreground hover:text-foreground transition-colors">Docs</button>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Support</a>
           </div>
         </div>
