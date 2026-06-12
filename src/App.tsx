@@ -1,13 +1,19 @@
+import { useState } from 'react';
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 import { Spotlight } from "@/components/ui/spotlight";
 import { LampContainer } from "@/components/ui/lamp";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { MagicCard } from "@/components/ui/magic-card";
-import { Layers, Zap, PenTool, CheckCircle2, Download, ArrowRight } from 'lucide-react';
+import { Layers, Zap, PenTool, CheckCircle2, Download, ArrowRight, Book } from 'lucide-react';
 import { motion } from "framer-motion";
+import Docs from "@/components/Docs";
 
 export default function App() {
+  const [showDocs, setShowDocs] = useState(false);
+
+  if (showDocs) return <Docs onBack={() => setShowDocs(false)} />;
+
   return (
     <div className="w-full min-h-screen bg-background text-foreground selection:bg-accent/50 dark overflow-x-hidden font-sans">
       {/* Header Navbar */}
@@ -31,6 +37,10 @@ export default function App() {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors">Download</a>
+            <button onClick={() => setShowDocs(true)} className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 bg-surface px-3 py-1.5 rounded-lg border border-border text-xs">
+              <Book className="w-3.5 h-3.5" />
+              Docs
+            </button>
           </nav>
         </div>
       </header>
@@ -308,6 +318,7 @@ export default function App() {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors">Download</a>
+            <button onClick={() => setShowDocs(true)} className="text-muted-foreground hover:text-foreground transition-colors">Docs</button>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Support</a>
           </div>
         </div>
