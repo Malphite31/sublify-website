@@ -279,7 +279,7 @@ export default function App() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-12 flex justify-center w-full"
+            className="mt-16 md:mt-12 flex justify-center w-full"
           >
             <a href="https://drive.google.com/file/d/1cBn_YshTpSP1PfTBDaYYylRfVzY592nT/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="group cursor-pointer">
               <RainbowButton className="px-10 py-8 text-xl font-bold shadow-[0_0_40px_rgba(255,255,255,0.1)] flex items-center gap-3">

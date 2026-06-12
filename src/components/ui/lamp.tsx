@@ -96,7 +96,7 @@ export const LampContainer = ({
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-background "></div>
       </div>
 
-      <div className="relative z-50 flex -translate-y-64 md:-translate-y-80 flex-col items-center px-5 text-center w-full">
+      <div className="relative z-50 flex -translate-y-48 md:-translate-y-80 flex-col items-center px-5 text-center w-full">
         <style>{`
           @media (max-width: 768px) {
             :root {
